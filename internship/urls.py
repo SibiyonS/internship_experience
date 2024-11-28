@@ -1,6 +1,5 @@
 from django.urls import path
-from . import views
-from .views import email_database
+from . import views
 
 urlpatterns = [
     path('',views.home,name='home'),
