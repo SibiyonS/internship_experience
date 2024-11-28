@@ -119,7 +119,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    r"E:\project life\internship_experience\internship\static",
+   r"internship_experience\internship\static",
 ]
 
 
