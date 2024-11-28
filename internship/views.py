@@ -2,11 +2,7 @@
 from django.shortcuts import render, redirect
 from .models import UserRegistration
 from django.core.mail import send_mail
-from django.db import IntegrityError
-from django.http import FileResponse
-from django.core.mail import EmailMessage
-from django.conf import settings
-import os
+from django.db import IntegrityError
 
 def register(request):
     if request.method == 'POST':
