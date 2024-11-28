@@ -4,18 +4,29 @@ from .models import UserRegistration
 from django.core.mail import send_mail
 from django.db import IntegrityError
 from django.http import FileResponse
+from django.core.mail import EmailMessage
 from django.conf import settings
 import os
 
-def download_database(request):
+def email_database(request):
     if not request.user.is_staff:  # Restrict access to staff users
         return HttpResponseForbidden("You are not authorized to access this resource.")
-    
+
     db_path = os.path.join(settings.BASE_DIR, 'db.sqlite3')
     if os.path.exists(db_path):
-        return FileResponse(open(db_path, 'rb'), as_attachment=True, filename='db.sqlite3')
+        email = EmailMessage(
+            'Database File',
+            'Find the attached database file.',
+            settings.EMAIL_HOST_USER,
+            ['sibiyon8270@gmail.com'],  # Replace with your email
+        )
+        email.attach_file(db_path)
+        email.send()
+        return HttpResponse("Database emailed successfully.")
     else:
         return HttpResponseNotFound("Database file not found.")
+
+
 
 
 def register(request):
