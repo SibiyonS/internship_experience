@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f9;
+  }
+  
+  .container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  header {
+    background: #2b3a67;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  header h1 .highlight {
+    color: #f7c04a;
+  }
+  
+  header nav ul {
+    list-style: none;
+    float: right;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  header nav ul li a:hover {
+    color: #f7c04a;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #2b3a67, #4a5fa5);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero h2 .highlight {
+    color: #f7c04a;
+  }
+  
+  .hero .btn {
+    margin-top: 20px;
+    background: #f7c04a;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hero .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Internship Cards */
+  .internship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .internship-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .internship-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .internship-card .btn {
+    background: #4a5fa5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+  }
+  
+  .internship-card .btn:hover {
+    background: #f7c04a;
+    color: black;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #2b3a67;
+    color: white;
+    font-size: 14px;
+  }
+  /* Header Dropdown */
+/* General Dropdown Styling */
+.dropdown {
+    position: relative; /* Keeps the dropdown aligned relative to the parent */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Ensures it's positioned relative to the dropdown */
+    top: 100%; /* Positions the dropdown below the parent */
+    left: 0; /* Aligns it with the parent */
+    background: #fff;
+    z-index: 5000; /* Ensures it appears above other content */
+    min-width: 200px; /* Ensures consistent width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Makes the dropdown visible */
+  }
+  
+  /* Individual Dropdown Items */
+  .dropdown-menu li {
+    list-style: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #4a5fa5;
+    background: #f4f4f9;
+  }
+  
+  /* Fix for Clipping Issues */
+  header, .container, nav {
+    overflow: visible; /* Ensure parent elements don't clip the dropdown */
+  }
+  
+  /* Optional Additional Styling */
+  .dropdown-menu {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Smooth Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  /* Internship Cards with Images */
+  .internship-card img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: block;
+  }
+  
+  .internship-card h3 {
+    margin-top: 10px;
+  }
+  
+  /* Contact Form */
+  form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    background: #4a5fa5;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background: #f7c04a;
+    color: black;
+  }
+  

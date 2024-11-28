@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Registration</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'internship/styles1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="/register/" method="POST">
+            {% csrf_token %}
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <h1 class="form-title">Register For Internship</h1>
+            <p class="form-description">Join us to unlock a world of opportunities. Please fill in the details below:</p>
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="domain"><i class="fas fa-briefcase"></i> Domain</label>
+                <select id="domain" name="domain" required>
+                    <option value="" disabled selected>Select your domain</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Python developer">Python Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="cloud computing">cloud computing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

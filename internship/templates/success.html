@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #2b3a67, #2575fc);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the Success Message */
+        .success-container {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .success-container h1 {
+            font-size: 2rem;
+            color: #6a11cb;
+            margin-bottom: 10px;
+        }
+
+        .success-container p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .success-container .btn {
+            background: linear-gradient(to bottom right, #2b3a67, #2575fc);
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .success-container .btn:hover {
+            background: linear-gradient(to bottom right, #2575fc, #6a11cb);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .success-container {
+                padding: 30px 20px;
+            }
+
+            .success-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .success-container p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1>Thank You!</h1>
+        <p>Your registration was successful. Our admin will contact you soon with further details.</p>
+        <a href="{% url 'home' %}" class="btn">Go to Homepage</a>
+    </div>
+</body>
+</html>
+

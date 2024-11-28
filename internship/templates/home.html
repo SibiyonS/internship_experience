@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="description" content="Gain hands-on experience with our online internship platform! Register, complete tasks, and earn certificates to boost your career. Start your journey today!">
+  <meta name="keywords" content="online internship, virtual internship, hands-on experience, career development, training, certificates">
+  <meta name="author" content="CodeBytes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeBytes - Unlock Your Potential</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'internship/styles.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Code<span class="highlight">Bytes</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a href="#">Internships</a>
+            <ul class="dropdown-menu">
+              <li><a href="#web-development">Web Development</a></li>
+              <li><a href="#data-science">Data Science</a></li>
+              <li><a href="#ai">Artificial Intelligence</a></li>
+              <li><a href="#app-development">App Development</a></li>
+              <li><a href="#cloud-computing">Cloud Computing</a></li>
+              <li><a href="#python-developer">Python Developer</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>          
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Empower Your Future with <span class="highlight">CodeBytes</span></h2>
+      <p>Explore immersive internships in cutting-edge fields. Learn, grow, and shine with real-world projects and industry-ready skills.</p>
+      <a href="#internships" class="btn">Browse Internships</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At CodeBytes, we specialize in empowering learners with practical, project-driven training in diverse domains such as web development, data science, artificial intelligence, and more. Our expert mentors and industry-relevant projects ensure you gain real-world skills.</p>
+    </div>
+  </section>
+
+  <section id="internships">
+    <div class="container">
+      <h2>Our Internship Programs</h2>
+      <div class="internship-grid">
+        <!-- Web Development -->
+        <div class="internship-card" id="web-development">
+          <img src="{% static 'internship/images/web-development.jpg' %}" alt="Web Development">
+          <h3>Web Development</h3>
+          <p>Learn front-end and back-end development with real-world projects.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+        <!-- Data Science -->
+        <div class="internship-card" id="data-science">
+          <img src="{% static 'internship/images/data-science.jpg' %}" alt="Data Science">
+          <h3>Data Science</h3>
+          <p>Master Python, R, and data visualization to analyze datasets.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+        <!-- AI -->
+        <div class="internship-card" id="ai">
+          <img src="{% static 'internship/images/ai.jpg' %}" alt="Artificial Intelligence">
+          <h3>AI & Machine Learning</h3>
+          <p>Work on AI projects, neural networks, and deep learning.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+        <!-- App Development -->
+        <div class="internship-card" id="app-development">
+          <img src="{% static 'internship/images/app-development.jpg' %}" alt="App Development">
+          <h3>App Development</h3>
+          <p>Build cross-platform apps using Flutter and React Native.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+        <!-- Cloud Computing -->
+        <div class="internship-card" id="cloud-computing">
+          <img src="{% static 'internship/images/cloud-computing.jpg' %}" alt="Cloud Computing">
+          <h3>Cloud Computing</h3>
+          <p>Learn cloud architectures, AWS, and DevOps fundamentals.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+        <!-- Python Developer -->
+        <div class="internship-card" id="python-developer">
+          <img src="{% static 'internship/images/python-developer.jpg' %}" alt="Python Developer">
+          <h3>Python Developer</h3>
+          <p>Master Python programming with hands-on projects and frameworks.</p>
+          <a href="register/" class="btn">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you. Fill out the form below to get in touch!</p>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 CodeBytes. All rights reserved.</p>
+  </footer>
+</body>
+</html>

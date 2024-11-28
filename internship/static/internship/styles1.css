@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right,  #2b3a67, #2575fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for Form */
+.form-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 0.8s ease;
+}
+
+/* Form Title and Description */
+.form-title {
+    font-size: 1.8rem;
+    color:  #2b3a67;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-description {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for Select Dropdown */
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    appearance: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Add Arrow for Dropdown */
+.form-group select:after {
+    content: "▼";
+    font-size: 12px;
+    color: #6a11cb;
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+}
+
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-group i {
+    margin-right: 5px;
+    color: #6a11cb;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to bottom right,  #2b3a67, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to bottom right, #2575fc, #6a11cb);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+}
